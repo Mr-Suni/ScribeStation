@@ -19,16 +19,20 @@
     </div>
 
     <div class="login-container">
-        <h2>Login</h2>
-        <input type="text" id="username" placeholder="Login" required>
-        <h2>Password</h2>
-        <input type="password" id="password" placeholder="Password" required>
-        <div class="button-container">
-            <a href="index.html" id="home-button">Home</a>
-            <button id="continue">Continue</button>
-            <a href="signUpPage.html" id="signup-button">Sign Up</a>
-        </div>
+        <h2>Log In</h2>
+        <form action="/ScribeStation/php/login.php" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <h2>Password</h2>
+            <input type="password" name="password" placeholder="Password" required>
+            <h2>___________________</h2>
+            <div class="button-container">
+                <a href="index.html" id="home-button">Home</a>
+                <input type="submit" value="Continue" id="continue">
+                <a href="signupPage.html" id="signup-button">Sign Up</a>
+            </div>
+        </form>
     </div>
+    
 
   <div class="wave-container">                                   
     <img src="assests/images/wave.svg" alt="wave" class="wave" />      <!-- the wave.svg was imported from https://www.softr.io/tools/svg-wave-generator -->

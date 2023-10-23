@@ -20,16 +20,21 @@
 
     <div class="login-container">
         <h2>Sign Up</h2>
-        <input type="text" id="full-name" placeholder="Full Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
-        <div class="button-container">
-            <button id="signup">Sign Up</button>
-            <a href="index.html" id="home-button">Home</a>
-            <a href="loginPage.html" id="login-button">Log In</a>
-        </div>
+        <form action="/ScribeStation/php/signup.php" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="text" name="full-name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+            <div class="button-container">
+                <a href="index.html" id="home-button">Home</a>
+                <input type="submit" value="Sign Up" id="continue">
+                <a href="loginPage.html" id="login-button">Log In</a>
+            </div>
+        </form>
     </div>
+    
+    
 
     <div class="wave-container">
         <img src="assests/images/wave.svg" alt="wave" class="wave" />
