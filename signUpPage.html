@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Scribe Station - Sign Up</title>
     <meta name="description" content="Sign Up to Scribe Station" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,13 +32,32 @@
             </div>
         </form>
     </div>
-    
-    
+
+
 
     <div class="wave-container">
         <img src="assests/images/wave.svg" alt="wave" class="wave" />
+        <!-- the wave.svg was imported from https://www.softr.io/tools/svg-wave-generator -->
     </div>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const signupError = urlParams.get('error');
+
+            if (signupError === "emailExists") {
+                alert('Email or Username already exists! Please use a different one.');
+            } else if (signupError === "unknownError") {
+                alert('An unknown error occurred. Please try again.');
+            }
+
+            const signupSuccess = urlParams.get('signup');
+            if (signupSuccess === "success") {
+                alert('Signup successful! Please log in.');
+            }
+        });
+    </script>
 </body>
+
 </html>

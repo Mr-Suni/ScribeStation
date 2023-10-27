@@ -225,27 +225,128 @@ body.login-page {
     .login-page {
         overflow: hidden;
     }
+
     .login-logo {
-        display: none; 
+        display: none;
     }
 
     .login-container {
-        width: 80%; 
-       
+        width: 80%;
+
     }
 
     .login-container h2 {
         align-self: center;
     }
-    
 
-    input[type="text"], input[type="email"], input[type="password"] {
-        width: 93%; 
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 93%;
         justify-content: center;
         margin-right: auto;
-         
+
     }
 }
 
 /* ----------------------------------------- */
 /* notes page : ------------------------------------------------------------- */
+
+body.main-pages {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(to right, #1b263b, white, white);
+    height: 9vh;             
+    width: 100%;
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+    padding: 0 20px; 
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.search-bar {
+    margin: 0;               
+    padding: 0 10px;           
+    align-self: center;  
+    height: 50%;
+    width: 15rem;
+    margin-left: 2.5rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 4px #1b263b;
+
+}
+
+.search-bar input {
+    font-size: 5rem;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    border: none; 
+}
+
+.header-logo {
+    height:5.7rem;
+    width: 9rem;
+    justify-self: center; 
+    align-items: center;
+    align-self: center; 
+
+}
+
+.icons {
+    display: flex; 
+    margin-right: 6rem;
+    align-items: center;  
+    gap: 30px; 
+    cursor: pointer;
+    font-size: large;
+
+}
+.material-icons {
+    color: #415a77; 
+    
+}
+.material-icons:hover {
+    transform: scale(1.2); 
+}
+
+.navbar {
+    background-color: #415a77ff;
+    padding: 5px 0;
+    text-align: center;
+  
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    text-shadow: #1b263b;
+    font-weight: bolder;
+    padding: 0 30px;
+    transition: color 0.3s ease; 
+    cursor: pointer;
+    
+}
+
+.navbar a:hover {
+    color: #74CC3E;
+    transform: scale(1.3);
+
+}
+
+.navbar span {
+    color: white;
+    font-weight: bold;
+}
+
+/*________________________________________________ */
+

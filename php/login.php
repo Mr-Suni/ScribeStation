@@ -14,12 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row["password"])) {
             header("Location: /ScribeStation/notePage.html");
             exit;
-        } else {
-            echo "Incorrect password!";
         }
-    } else {
-        echo "Username not found!";
     }
+
+    header("Location: /ScribeStation/loginPage.html?error=true");
+    exit;
 
     $stmt->close();
     $conn->close();

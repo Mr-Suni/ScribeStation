@@ -32,15 +32,26 @@
             </div>
         </form>
     </div>
-    
 
-  <div class="wave-container">                                   
-    <img src="assests/images/wave.svg" alt="wave" class="wave" />      <!-- the wave.svg was imported from https://www.softr.io/tools/svg-wave-generator -->
+
+    <div class="wave-container">
+        <img src="assests/images/wave.svg" alt="wave" class="wave" />
+        <!-- the wave.svg was imported from https://www.softr.io/tools/svg-wave-generator -->
     </div>
 
 
-
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const loginError = urlParams.get('error');
+
+            if (loginError === "true") {
+                alert('Incorrect login! Please check your credentials.');
+            }
+        });
+
+    </script>
 </body>
 
 </html>

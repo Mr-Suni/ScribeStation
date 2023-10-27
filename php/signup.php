@@ -11,25 +11,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ss", $username, $email);
     $stmt->execute();
     if ($stmt->get_result()->num_rows > 0) {    
-        header("Location: /ScribeStation/signUpPage.html");
-        echo "Username or Email exists!";
+        header("Location: /ScribeStation/signupPage.html?error=emailExists");
         exit;
     }
     
     $stmt = $conn->prepare("INSERT INTO users (full_name, username, email, password) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $fullName, $username, $email, $password);
     if($stmt->execute()) {
-        echo "User registered!";
-        header("Location: /ScribeStation/loginPage.html");
+        header("Location: /ScribeStation/loginPage.html?signup=success");
         exit();
     } else {
-        echo "Error: " . $stmt->error;
+        header("Location: /ScribeStation/signupPage.html?error=unknownError");
+        exit;
     }
 
     $stmt->close();
     $conn->close();
 }
-
-
-
 ?>
