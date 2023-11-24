@@ -49,15 +49,15 @@ $conn->close();
     <meta name="description" content="Sign Up to Scribe Station" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/notePage.css" />
     <title>Notes</title>
 </head>
 
 <body class="main-pages">
 
     <div class="header">
-        <input type="text" placeholder="Search..." class="search-bar">
         <a href="../index.html">
-            <img src="../assets/images/logo3.png" alt="Scribe Station Logo" class="header-logo" />
+            <img src="../assets/images/logo.png" alt="Scribe Station Logo" class="header-logo" />
         </a>
         <div class="icons">
             <span class="material-icons">fullscreen</span>
@@ -71,8 +71,8 @@ $conn->close();
         <a href="#dashboard">Dashboard</a>
         <a href="#community">Study Hub</a>
         <a href="#calendar">Calendar</a>
-        <a href="notePage.html">Notes</a>
-        <a href="#flashcards">FlashCards</a>
+        <a href="notePage.php">Notes</a>
+        <a href="flashCardsPage.php">FlashCards</a>
         <a href="#tasks">Tasks</a>
         <a href="#study-tips">Study Tips</a>
         <a href="#archive">Archive</a>

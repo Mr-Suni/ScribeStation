@@ -1,3 +1,5 @@
+/*________________________________________________ */
+/* tool bar button functionality:   ---------------------------------------------------- */
 function toggleBold() {
     document.execCommand('bold', false, '');
 }
@@ -66,6 +68,22 @@ function insertImage() {
 }
 
 
+function toggleActiveTool(button) {
+   
+    document.querySelectorAll('.note-toolbar button').forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+}
+
+
+document.querySelectorAll('.note-toolbar button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        toggleActiveTool(this);
+    });
+});
+
 
 
 document.querySelector('.format_bold').addEventListener('click', toggleBold);
@@ -84,12 +102,16 @@ document.querySelector('.justify_center').addEventListener('click', justifyCente
 document.querySelector('.justify_right').addEventListener('click', justifyRight);
 document.querySelector('.insert_photo').addEventListener('click', insertImage);
 
+/*________________________________________________ */
+/* save, delete, fetch functionality:   ---------------------------------------------------- */
+
 document.querySelectorAll('.note-item').forEach(function (noteItem) {
     noteItem.addEventListener('click', function () {
         var noteId = this.getAttribute('data-noteid');
         fetchNoteContent(noteId);
     });
 });
+
 
 function fetchNoteContent(noteId) {
     var xhr = new XMLHttpRequest();
@@ -172,3 +194,4 @@ function saveNoteContent(noteId) {
     };
     xhr.send('noteId=' + encodeURIComponent(noteId) + '&content=' + encodeURIComponent(content));
 }
+

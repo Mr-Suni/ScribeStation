@@ -1,0 +1,257 @@
+/*________________________________________________ */
+/* Landing page : ------------------------------------------------------------- */
+
+body.landing-page {
+    overflow: hidden;
+    min-height: 100vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    padding-bottom: 3px;
+}
+
+.logo {
+    width: 36.5rem;
+    height: 21rem;
+}
+
+.links {
+    display: flex;
+    gap: 200px;
+}
+
+.login-link,
+.signup-link {
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-shadow: 0px 0.8px 1px #415a77;
+}
+
+.login-link {
+    color: #415a77;
+}
+
+.signup-link {
+    color: #415a77;
+}
+
+.login-link:hover,
+.signup-link:hover {
+    opacity: 0.8;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 5rem;
+        margin-top: 1rem;
+    }
+
+    .login-link,
+    .signup-link {
+        font-size: x-large;
+        font-weight: bolder;
+        text-shadow: 0px 0.8px 1px #415a77;
+        justify-content: center;
+    }
+
+    .wave {
+        width: 100%;
+        margin-top: auto;
+    }
+}
+
+/* ----------------------------------------- */
+/* Login page : ------------------------------------------------------------- */
+
+body.login-page {
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-login {
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+.login-logo {
+    width: 15rem;
+    height: 10rem;
+}
+
+.login-container {
+    background-color: #1b263b;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px #415a77;
+    height: 25rem;
+    width: 21rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+}
+
+.login-container h2 {
+    font-size: 30px;
+    color: #fff;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0px 0.8px 1px #415a77;
+
+}
+
+.login-container input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    font-size: 16px;
+    margin-bottom: 16px;
+    outline: none;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+}
+
+.login-container input:focus {
+    background-color: #c1c2c1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#continue {
+    font-weight: bolder;
+    width: 6rem;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #415a77;
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#continue:hover {
+    transform: scale(1.05);
+}
+
+#home-button,
+#signup-button {
+    font-weight: bolder;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #ffff;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+#home-button:hover,
+#signup-button:hover {
+    color: #415a77;
+}
+
+#signup {
+    font-weight: bolder;
+    width: 8rem;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#signup:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+#login-button {
+    font-weight: bolder;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #ffff;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+#login-button:hover {
+    color: #415a77;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .login-page {
+        overflow: hidden;
+    }
+
+    .login-logo {
+        display: none;
+    }
+
+    .login-container {
+        width: 80%;
+
+    }
+
+    .login-container h2 {
+        align-self: center;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 93%;
+        justify-content: center;
+        margin-right: auto;
+
+    }
+}
+
+/* ----------------------------------------- */
