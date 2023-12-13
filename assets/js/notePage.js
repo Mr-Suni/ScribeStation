@@ -69,8 +69,8 @@ function insertImage() {
 
 
 function toggleActiveTool(button) {
-   
-    document.querySelectorAll('.note-toolbar button').forEach(function(btn) {
+
+    document.querySelectorAll('.note-toolbar button').forEach(function (btn) {
         btn.classList.remove('active');
     });
 
@@ -78,8 +78,8 @@ function toggleActiveTool(button) {
 }
 
 
-document.querySelectorAll('.note-toolbar button').forEach(function(button) {
-    button.addEventListener('click', function() {
+document.querySelectorAll('.note-toolbar button').forEach(function (button) {
+    button.addEventListener('click', function () {
         toggleActiveTool(this);
     });
 });

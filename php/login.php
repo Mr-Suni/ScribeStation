@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
     if ($row = $result->fetch_assoc()) {
         if (password_verify($password, $row["password"])) {
-            // Set session variables
             $_SESSION["loggedin"] = true;
             $_SESSION["username"] = $username;
             $_SESSION["id"] = $row["id"];
